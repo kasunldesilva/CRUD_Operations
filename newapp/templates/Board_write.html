@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block title%}
+Board Write
+{%endblock%}
+
+{%block content %}
+    <div class="container">
+        <h1>Add Member</h1>
+        <form action="{% url 'saverec' %}" method="post">
+            {% csrf_token %}
+            <label for="">Title</label><br><br>
+            <input type="text" name="title"><br><br>
+            <label for="">post by</label><br><br>
+            <input type="text" name="name"><br><br>
+            <label for="">Details</label><br><br>
+            <input type="text" name="details"><br><br>
+            <button type="submit" id="new">Save</button>
+        </form>
+    </div>
+
+{%endblock%}
+

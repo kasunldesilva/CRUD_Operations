@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block title%}
+Board Write
+{%endblock%}
+
+{%block content %}
+    <div class="container">
+        
+        <table id="customers" border="1">
+            <div class="row">
+                <h1>Member Details</h1>
+                <a href="{% url 'write' %}"><button id="new3">Add Member</button></a>
+            </div>
+            <tbody>
+                
+              
+                
+                <p><strong>ID:</strong> {{ mem.id }}</p>
+                <p><strong>Title:</strong> {{ mem.title }}</p>
+                <p><strong>Written by:</strong> {{ mem.name }}</p>
+                <p><strong>Details:</strong> {{ mem.details }}</p>
+            
+                
+            </tbody>
+        
+            
+        </table>
+        <br><br>
+        <a href="{% url 'edit' id=mem.id%}"><button id="new3">Upate </button></a>
+    </div>
+
+
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
